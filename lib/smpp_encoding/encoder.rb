@@ -31,10 +31,10 @@ module SmppEncoding
 
     def enc coding, message
       if coding == :auto
-        res = auto_encode(msg)
+        res = auto_encode(message)
         [res[:payload], res[:data_coding]]
       else
-        [encode(coding, msg), coding]
+        [encode(coding, message), coding]
       end
     end
   end
