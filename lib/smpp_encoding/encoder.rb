@@ -28,5 +28,14 @@ module SmppEncoding
         message.encode('UTF-16BE').force_encoding('binary')
       end
     end
+
+    def enc coding, message
+      if coding == :auto
+        res = auto_encode(msg)
+        [res[:payload], res[:data_coding]]
+      else
+        [encode(coding, msg), coding]
+      end
+    end
   end
 end
