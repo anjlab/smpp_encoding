@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["yury.korolev@gmail.com"]
   gem.description   = %q{Encodings for ruby-smpp gem}
   gem.summary       = %q{Supports auto encoding messages to GSM and UNICODE}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/anjlab/smpp_encoding"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = SmppEncoding::VERSION
 
-  gem.add_dependency "gsm_encoder", "~> 0.1.0"
+  gem.add_dependency "gsm_encoder", "~> 0.1.4"
 end
